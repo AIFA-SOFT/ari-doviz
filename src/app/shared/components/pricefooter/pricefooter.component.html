@@ -1,0 +1,17 @@
+
+  <div class="slider dark:bg-gray-900 lg:bg-gray-200 lg:text-black dark:text-white"    >
+  <div class="slide-track">
+    <div class="box2" *ngFor="let data of footerList; trackBy : trackByPrice">
+      <p class="head">{{data.Code}}</p>
+      <p class="title"
+         [ngClass]="{'title-up': data.askPercentChange >0,
+                 'title-down': data.askPercentChange <0}">{{data.Ask.toFixed(3)| number:'1.4-4'}}
+                 <i *ngIf="data.askPercentChange>0" style="color:rgb(9, 220, 1)"  class="material-icons">arrow_upward</i>
+                 <i *ngIf="data.askPercentChange<0" style="color:rgb(222, 14, 14);"  class="material-icons">arrow_downward</i>
+                 <i *ngIf="data.askPercentChange===0 || !data.askPercentChange" style="color:rgb(241, 168, 33);"   class="material-icons">remove</i>
+      </p>
+    </div>
+  </div>
+</div>
+
+

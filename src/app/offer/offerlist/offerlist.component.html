@@ -1,0 +1,71 @@
+<div class="tabs">
+  <input
+    class="tabs__item-input"
+    type="radio"
+    name="tabs"
+    id="tabtwo"
+    checked="checked"
+  />
+  <label class="tabs__item-label" for="tabtwo">Görüş Ve Öneriler Form</label>
+  <div class="tabs__item-content">
+    <app-offeradd></app-offeradd>
+  </div>
+
+  <input class="tabs__item-input" type="radio" name="tabs" id="tabthree" />
+  <label class="tabs__item-label" for="tabthree">Görüş Ve Öneriler </label>
+  <div class="tabs__item-content">
+    <div class="relative overflow-x-auto shadow-md sm:rounded-lg">
+      <table class="w-full text-sm text-left text-gray-500 dark:text-gray-400">
+        <thead
+          class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400"
+        >
+          <tr>
+            <th scope="col" class="px-5 py-3">#</th>
+            <th scope="col" class="px-5 py-3">Ad - Soyad</th>
+            <th scope="col" class="px-5 py-3">Email</th>
+            <th scope="col" class="px-5 py-3">İçerik</th>
+            <th scope="col" class="px-5 py-3">Yayınlanma Durumu</th>
+            <th scope="col" class="px-5 py-3">Edit</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr
+            class="bg-white border-b dark:bg-gray-800 dark:border-gray-700"
+            *ngFor="let heroe of heroes; let i = index"
+          >
+            <th scope="row">{{ i + 1 }}</th>
+            <td>{{ heroe.offerrname }}</td>
+            <td>{{ heroe.oemail }}</td>
+            <td>{{ heroe.offerpoder }}</td>
+<td>
+  <div class="flex items-center h-12 px-5 py-3">
+    <label class="toggle-control"   type="submit">
+      <input type="checkbox"  required
+      [(ngModel)]="heroe.offerpublish" disabled
+      name="offerpublish"
+      #offerpublish="ngModel" class="w-4 h-4 border border-gray-300 rounded bg-gray-50 focus:ring-3 focus:ring-blue-300 dark:bg-gray-700 dark:border-gray-600 dark:focus:ring-blue-600 dark:ring-offset-gray-800" required>
+      <span class="control"></span>
+    </label>
+  </div>
+</td>
+            <td class=" ">
+              <!-- <button
+              type="button"
+              class="btn btn-info mr-1"
+              [routerLink]="['/offeredit', heroe.vistorid]"  >
+              🔏
+          </button> -->
+              <button
+                type="button"
+                class="btn btn-danger h-12 px-5 py-3"
+                (click)="borrarHeroe(heroe, i)"
+              >
+               🗑
+              </button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>

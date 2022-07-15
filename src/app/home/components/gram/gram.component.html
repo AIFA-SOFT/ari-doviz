@@ -1,0 +1,97 @@
+<div
+class="tab_content h-[80%] v-screen mx-auto "
+id="design_content"
+
+>
+<table  >
+  <thead>
+    <tr>
+      <th style=" ">Sembol</th>
+      <th>Eski Satış</th>
+      <th class="relative left-[30px]">Eski Alış</th>
+      <th class="relative left-[25px]">Yeni Satış</th>
+      <th>Yeni Alış</th>
+      <th>{{ date | date: "dd.MM.yyyy" }}</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let data of sarrafiyesocketitems">
+
+      <td  class=" ">
+        <img src="../../assets/icon/gold.png" class="float-left hover:float-left" alt="" width="40">
+        <span class="relative top-2 float-left hover:float-left ">{{data.Code}}</span>
+
+
+
+      </td>
+      <td>
+        <b style="font-size: 20px">
+          {{ data.Eiscilik.Bid }}
+        </b>
+        <br />
+
+        <span *ngIf="data.Eski.Bid < 0" class="down">
+          {{ data.Eski.Bid }}
+        </span>
+        <span *ngIf="data.Eski.Bid == 0" class="stabil">
+          {{ data.Eski.Bid }}
+        </span>
+        <span *ngIf="data.Eski.Bid > 0" class="up">
+          {{ data.Eski.Bid }}
+        </span>
+      </td>
+      <td>
+        <b style="font-size: 20px">
+          {{ data.Eiscilik.Ask }} </b
+        ><br />
+        <span *ngIf="data.Eski.Ask < 0" class="down">
+          {{ data.Eski.Ask }}
+        </span>
+        <span *ngIf="data.Eski.Ask == 0" class="stabil">
+          {{ data.Eski.Ask }}
+        </span>
+        <span *ngIf="data.Eski.Ask > 0" class="up">
+          {{ data.Eski.Ask }}
+        </span>
+      </td>
+      <td>
+        <b style="font-size: 20px">
+          {{ data.Yiscilik.Bid }} </b
+        ><br />
+        <span *ngIf="data.Yeni.Bid < 0" class="down">
+          {{ data.Yeni.Bid }}
+        </span>
+        <span *ngIf="data.Yeni.Ask == 0" class="stabil">
+          {{ data.Yeni.Bid }}
+        </span>
+        <span *ngIf="data.Yeni.Ask > 0" class="up">
+          {{ data.Yeni.Bid }}
+        </span>
+      </td>
+      <td>
+        <b style="font-size: 20px">
+          {{ data.Yiscilik.Ask }} </b
+        ><br />
+        <span *ngIf="data.Yeni.Ask < 0" class="down">
+          {{ data.Yeni.Ask }}
+        </span>
+        <span *ngIf="data.Yeni.Ask == 0" class="stabil">
+          {{ data.Yeni.Ask }}
+        </span>
+        <span *ngIf="data.Yeni.Ask > 0" class="up">
+          {{ data.Yeni.Ask }}
+        </span>
+      </td>
+      <td>
+        <i class="material-icons">access_time</i>
+        <span style="position:absolute ; margin-left:1em">{{ date | date: "dd.MM.yyyy" }}</span>
+      </td>
+    </tr>
+  </tbody>
+  <br /><br />
+</table>
+</div>
+
+
+
+

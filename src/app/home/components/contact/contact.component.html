@@ -1,0 +1,42 @@
+<nav-bar></nav-bar>
+<div class="wrapper " style="background-color: #1D1E22;">
+	<div class="content-wrap">
+		<div class="map-wrap">
+			<iframe frameborder="0" height="550" src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d12035.235170952761!2d28.983455!3d41.0513103!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xbf206212223c8b74!2zQVJJIETDllbEsFogQS7Fng!5e0!3m2!1str!2str!4v1656741083569!5m2!1str!2str" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" style="border:0" width="100%"></iframe>
+		</div>
+		<div class="layout-center">
+      <div class="form-wrap">
+        <div class="form-block">
+          <h2 class="sub-title">Hızlı İletişim</h2>
+          <form action="" class="contact" (ngSubmit)="guardar(f)" #f="ngForm">
+            <div class="form-item">
+              <label for="">İsim - Soyisim</label>
+              <input id="name" type="text" placeholder="isim - soyisim"  [(ngModel)]="heroe.visitorname" name="visitorname" #visitorname="ngModel"required >
+             </div>
+             <div class="form-item">
+              <label for="">Email</label>
+              <input id="email"type="email"    class="form-control"    placeholder="email " required >
+             </div>
+            <div class="form-item">
+              <label for="">İçerik</label>
+              <textarea type="text"   class="form-control"  placeholder="içerik" [(ngModel)]="heroe.vistorpoder"   name="vistorpoder"    required  rows="5" cols="60" class="form-textarea required resize-vertical"></textarea>
+             </div>
+            <div class="form-item">
+              <input class="button form-submit"  type="submit" name="op" value="Gönder">
+            </div>
+            </form>
+          </div>
+        <div class="address-block">
+          <h2 class="sub-title">Arı Döviz İletişim Bilgileri</h2>
+          <ul>
+            <li>Kurtuluş Caddesi No:35/B /  Kurtuluş/Şişli/İSTANBUL</li>
+            <li><a href="tel:+90(212) 296 7800">Tel : 0(212) 296 7800</a></li>
+            <!-- <li><a href="mailto: info@aridoviz.com"> info@aridoviz.com</a></li> -->
+            <li></li>
+          </ul>
+        </div>
+      </div>
+		</div>
+	</div>
+</div>
+<app-footer></app-footer>

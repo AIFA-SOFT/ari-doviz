@@ -1,0 +1,25 @@
+
+
+<div class="container">
+  <div class="content">
+    <div class="select-container">
+      <div class="select-field text-white">
+        <h3 class="align-center">Miktar</h3>
+      <input type="text" class="select-field  form-control text-black" placeholder="Miktar" aria-label="amount" [(ngModel)]="miktar">
+      <h3 class="align-center">Sembol</h3>
+
+        <select [(ngModel)]="myDropDown" (ngModelChange)="onChangeofOptions($event)">
+        	<option  *ngFor="let data of footerList" value="{{  data.Ask}}" >{{data.Code}}</option>
+        </select>
+        <h3 class="align-center">=</h3>
+
+      <input type="text" class="form-control" type="text" value="{{sonuc}}" placeholder="Sonuç" disabled>
+
+      </div>
+
+    </div>
+
+    <button>ÇEVİR</button>
+  </div>
+</div>
+

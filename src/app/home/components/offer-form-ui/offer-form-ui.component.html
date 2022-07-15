@@ -1,0 +1,56 @@
+
+
+    <div class=" overflow-hidden flex items-center justify-center ">
+      <div class="w-10/12 lg:w-9/12 xl:w-7/12 flex">
+          <div class="w-full h-auto hidden lg:block lg:w-1/2 bg-cover rounded-lg lg:rounded-r-none"
+              style="background-image: url('https://images.pexels.com/photos/33999/pexels-photo.jpg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260')">
+          </div>
+          <div class="w-full lg:w-1/2 bg-black rounded-lg lg:rounded-l-none py-24 px-12">
+              <h3 class="font-bold text-3xl text-red-600 text-center tracking-widest uppercase mb-4">Görüş Ve Önerileriniz</h3>
+              <form class="g-black"action="#0" (ngSubmit)="guardar(f)" #f="ngForm">
+                  <div class="mb-4">
+                      <label class="block mb-2 text-sm font-bold" for="username">
+                        İsim - Soyisim
+                      </label>
+                      <input  type="text"
+                      class="w-full p-3  text-black border rounded shadow focus:outline-none focus:shadow-outline"
+                      text-black
+                      placeholder="isim -soyisim "
+                      [(ngModel)]="heroe.offerrname"
+                      name="visitorname"
+                      #visitorname="ngModel"
+                      required />
+                  </div>
+                  <div class="mb-4">
+                    <label class="block mb-2 text-sm font-bold" for="password">
+                     İçerik
+                    </label>
+                    <input  class="w-full p-3 text-black border "      type="text"
+                    placeholder="içerik "
+                    [(ngModel)]="heroe.offerpoder"
+                    name="offerpoder"
+                    #offerpoder="ngModel"
+                    required>
+                </div>
+                  <div class="mb-4">
+                    <label class="block mb-2 text-sm font-bold" for="password">
+                       Email
+                    </label>
+                    <input  class="w-full p-3 text-black  border rounded shadow focus:outline-none focus:shadow-outline text-black"     type="email"
+                    placeholder="email "
+                    [(ngModel)]="heroe.oemail"
+                    name="vemail"
+                    #vemail="ngModel"
+                    required>
+                </div>
+                  <div class="mb-4">
+                      <button class="w-full p-3 font-bold text-white bg-red-500 rounded-full focus:outline-none" type="submit" >
+                         Gönder
+                      </button>
+                  </div>
+
+              </form>
+          </div>
+      </div>
+  </div>
+<br><br><br>

@@ -1,0 +1,52 @@
+<h4 style="align-items: center; text-align: center" class="align center">
+  <span style="margin-left: 1em">Alış</span>
+  <span style="margin-left: 11em">Satış</span>
+</h4>
+<table class="align center">
+  <tbody
+    *ngFor="let dovizData of footerList"
+    class="dark:text-white lg:text-dark"
+  >
+    <tr>
+      <img
+        src="http://aifafx.com/flags/{{ dovizData.Code }}.jpg"
+        class="sembol h-10 ml-12"
+        alt=""
+      />
+      <td data-label="" class="code">
+        <span style=" "
+          >{{ dovizData.Code }}
+        </span>
+      </td>
+
+      <td
+        data-label=""
+        class="ask dark:text-white lg:text-dark"
+        [ngClass]="{
+          exup: dovizData.askPercentChange > 0,
+          exdown: dovizData.askPercentChange < 0
+        }"
+      >
+
+        {{ dovizData.Ask }}
+      </td>
+      <td
+        data-label=""
+        class="bid dark:text-white lg:text-dark"
+        [ngClass]="{
+          exup: dovizData.askPercentChange > 0,
+          exdown: dovizData.askPercentChange < 0
+        }"
+      >
+        {{ dovizData.Bid }}
+      </td>
+      <td data-label="" style="color: rgb(159, 159, 158)">
+        {{ dovizData.Time | date: "hh.MM.ss" }}
+      </td>
+
+      <td></td>
+    </tr>
+    <br />
+  </tbody>
+</table>
+<br />

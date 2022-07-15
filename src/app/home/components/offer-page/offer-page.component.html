@@ -1,0 +1,53 @@
+<nav-bar></nav-bar>
+<div class="w-screen h-screen  bg-white">
+  <h1 class="not-italic  font-mono font-bold    text-center py-24" style="font-size: 3em;"> Görüş Ve Önerileriniz</h1>
+  <div class="mt-12 flex flex-col md:flex-row space-x-12">
+    <div class="w-screen w-1/2">
+      <div class="bg-white   overflow-auto ">
+        <ul class="divide-y divide-gray-300" *ngFor="let heroe of heroes; let i = index">
+          <li class="text-gray-500   ">
+
+          </li>
+          <li class="  ">
+              <span  class="group block max-w-xl mx-auto rounded-lg p-5 bg-white ring-1 ring-slate-900/5 shadow-lg space-y-3 hover:bg-sky-500 hover:ring-sky-500" style="width: 100%;" *ngIf="heroe.vistorpublish == true">
+                <div class="flex items-center space-x-3">
+                  <img src="../../../../assets/logo/white.png" class="h-12 w-12 stroke-sky-500 group-hover:stroke-white" > <br>
+                  <h3 class="text-slate-900 group-hover:text-white text-sm font-semibold">{{ heroe.visitorname }}
+                    <small>{{ heroe.vemail }}</small>
+                  </h3><br>
+                </div>
+              </span>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="flex flex-col w-1/2">
+      <div class="space-y-2">
+        <form class="w-full max-w-xl bg-white rounded-lg px-4 pt-2"(ngSubmit)="guardar(f)" #f="ngForm">
+          <div class="flex flex-wrap -mx-3 mb-6">
+           <div class="w-full md:w-full px-3 mb-2 mt-2">
+           <h2 class="px-4 pt-3 pb-2 text-gray-800 text-lg">İsim - Soyisim</h2>
+              <input id="name" type="text" placeholder="isim - soyisim"  [(ngModel)]="heroe.visitorname" name="visitorname" #visitorname="ngModel"required class="bg-gray-100 rounded  leading-normal resize-none w-full h-10 py-2 px-3 font-medium placeholder-gray-700 focus:outline-none focus:bg-white" >
+           </div>
+           <div class="w-full md:w-full px-3 mb-2 mt-2">
+             <h2 class="px-4 pt-3 pb-1 text-gray-800 text-lg">Email</h2>
+                <input id="email"type="email"    class="form-control"    placeholder="email "    [(ngModel)]="heroe.vemail"   name="vemail"   #vemail="ngModel" required class="bg-gray-100 rounded  leading-normal resize-none w-full h-10 py-2 px-3 font-medium placeholder-gray-700 focus:outline-none focus:bg-white" >
+           </div>
+             <h2 class="px-4 pt-3 pb-1 text-gray-800 text-lg">İçerik</h2>
+             <div class="w-full md:w-full px-3 mb-2 mt-2">
+                <input  type="text"   class="form-control"  placeholder="içerik" [(ngModel)]="heroe.vistorpoder"   name="vistorpoder"    required class="bg-gray-100 rounded  leading-normal resize-none w-full h-30 py-10 px-3 font-medium placeholder-gray-700 focus:outline-none focus:bg-white" >
+             </div>
+             <div class="w-full md:w-full flex items-start md:w-full px-3 ">
+
+                <div class="-mr-1">
+                   <input type='submit' class="bg-black text-white font-medium py-1 px-4  rounded-lg tracking-wide mr-1 hover:bg-gray-100" value='Yayınla'>
+                </div>
+             </div>
+           </div>
+          </form>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- <app-footer></app-footer> -->

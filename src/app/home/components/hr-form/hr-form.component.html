@@ -1,0 +1,122 @@
+<nav-bar></nav-bar>
+
+<div class=" h-screen bg-white">
+<div class="grid justify-items-center shadow-md flex-shrink md:flex-shrink-0">
+  <div class="w-3/5 bg-white ">
+    <div class="p-8">
+      <div
+        class="shadow-lg mt-3 pt-3 pb-3 w-full text-white text-center hover:bg-indigo-400 rounded-full cursor-pointer hidden"
+      ></div>
+
+      <form (ngSubmit)="guardar(f)" #f="ngForm">
+        <div>
+          <label for="username" class="text-xs text-gray-500">İsim  - Soyisim</label>
+          <input
+            id="username"
+            class="bg-transparent border-b m-auto block border-gray-500 w-full mb-6 text-gray-700 pb-1"
+            type="text"
+            placeholder="isim -soyisim "  [(ngModel)]="heroe.hrrname"  name="hrrname"
+            #hrrname="ngModel"
+            required
+
+
+
+          />
+        </div>
+        <div>
+          <label id="email" class="text-xs text-gray-500">Email</label>
+          <input
+            id="email"
+            class="bg-transparent border-b m-auto block border-gray-500 w-full mb-6 text-grey-700 pb-1"
+            type="email"
+            placeholder="Email"  [(ngModel)]="heroe.hemail" name="hemail"   #hemail="ngModel" required     />
+        </div>
+        <div>
+          <label id="age" class="text-xs text-gray-500">Yaş</label>
+          <input
+            id="age"
+            name="age"
+            class="bg-transparent border-b m-auto block border-gray-500 w-full mb-6 text-grey-700 pb-1"
+            type="number"
+            placeholder="Yaş"  [(ngModel)]="heroe.hryas" name="hryas"   #hryas="ngModel" required     />
+
+        </div>
+        <div>
+          <label id="password" class="text-xs text-gray-500">Ev Adresiniz:</label>
+          <input
+            id="password"
+            name="password"
+            class="bg-transparent border-b m-auto block border-gray-500 w-full mb-6 text-grey-700 pb-1"
+            type="text"
+            placeholder="Ev Adresiniz"  [(ngModel)]="heroe.hrpoder" name="hrpoder"   #hrpoder="ngModel" required
+          />
+        </div>
+        <div>
+          <label id="password_confirmation" class="text-xs text-gray-500"
+            >Telefon Numaranız</label
+          >
+          <input
+            id="password_confirmation"
+            name="password_confirmation"
+            class="bg-transparent border-b m-auto block border-gray-500 w-full mb-6 text-grey-700 pb-1"
+            type="text"
+            placeholder="Ev Adresiniz"  [(ngModel)]="heroe.phoneNumber" name="phoneNumber"   #phoneNumber="ngModel" required
+          />
+        </div>
+        <div>
+          <label id="country" class="text-xs text-gray-500">Eğitim Durumunuz</label>
+          <select
+            class="bg-transparent w-full py-1.5 px-3 text-gray-800 border-b border-gray-500 transition duration-500 focus:outline-none focus:border-black rounded"
+            placeholder="Eğitim Durumunuz"  [(ngModel)]="heroe.hrphoneNumber" name="hrphoneNumber"   #hrphoneNumber="ngModel" required
+          >
+            <option value="Orta Okul">Orta Okul</option>
+            <option value="Lise">Lise</option>
+            <option value="Üniversite">Üniversite</option>
+            <option value="Belirtmek İstemiyorum">Belirtmek İstemiyorum</option>
+          </select>
+        </div><br>
+        <div>
+          <label id="password_confirmation" class="text-xs text-gray-500"
+            >İş Tercihiniz</label
+          >
+          <input
+            id="password_confirmation"
+            name="password_confirmation"
+            class="bg-transparent border-b m-auto block border-gray-500 w-full mb-6 text-grey-700 pb-1"
+            type="text"
+            placeholder="İş Tercihiniz"  [(ngModel)]="heroe.hrjobs" name="hrjobs"   #hrjobs="ngModel" required
+          />
+        </div>
+        <div>
+          <label id="country" class="text-xs text-gray-500">Askerlik Durumunuz</label>
+          <select
+            class="bg-transparent w-full py-1.5 px-3 text-gray-800 border-b border-gray-500 transition duration-500 focus:outline-none focus:border-black rounded"
+            placeholder="Askerlik Durumunuz"  [(ngModel)]="heroe.hrMilitary" name="hrMilitary"   #hrMilitary="ngModel" required
+          >
+            <option value="Yaptım">Yaptım</option>
+            <option value="Yapmadım">Yapmadım</option>
+            <option value="Tecilli">Tecilli</option>
+          </select>
+        </div>
+        <div class="text-center mt-4">
+          <p class="text-sm text-gray-600">
+            Bilgilerimi gerekli kişilerin görmesini
+            <a
+              href="#"
+              class="no-underline text-indigo-500 font-bold hover:text-indigo-400"
+              >izin veriyorum.</a
+            >
+          </p>
+        </div>
+        <button type="submit" class="shadow-lg mt-3 pt-3 pb-3 w-full text-white bg-indigo-500 hover:bg-indigo-400 rounded-full cursor-pointer">Kayıt Et</button>
+      </form>
+
+    </div>
+  </div>
+</div>
+</div>
+
+
+  <app-footer></app-footer>
+
+
