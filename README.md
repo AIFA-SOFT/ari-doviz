@@ -18,7 +18,7 @@ Use it as you want
 - Angular
 - Tailwind CSS
 # Note
-You have to do npm install one by one inside. @ngx-translate & @biesbjerg 
+Under firebase{} in environments, enter your firebase information in firebase settings.
 ## Screenshots
 <img src="src/assets/ss/1.png">
 <img src="src/assets/ss/2.png">
