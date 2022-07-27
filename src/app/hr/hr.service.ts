@@ -11,7 +11,7 @@ import { map, delay } from 'rxjs/operators';
 })
 export class HrService {
 private url =
-'https://aridoviz-default-rtdb.europe-west1.firebasedatabase.app';
+'https://firebase-realtime-example.firebasedatabase.app';
 
 constructor(private http: HttpClient) {}
 
