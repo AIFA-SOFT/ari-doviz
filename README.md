@@ -1,4 +1,4 @@
-# ari-doviz
+# Arı Döviz
 Managed Website with Simple Socket and Firebase
  
 
