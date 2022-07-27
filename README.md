@@ -16,6 +16,7 @@ Use it as you want
 ## Making
 - Ease of Use.
 - Angular
+- Tailwind CSS
 # Note
 You have to do npm install one by one inside. @ngx-translate & @biesbjerg 
 ## Screenshots
