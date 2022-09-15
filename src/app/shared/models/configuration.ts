@@ -1,5 +1,5 @@
 export const servers = {
-  real: 'ws://89.19.27.85:34018'
+  real: 'wss://sslsocket.aifanet.com/89.19.27.85/34018'
 };
 
 interface Sarrafiye {
