@@ -33,3 +33,5 @@ export const sarrafiyeList:Sarrafiye[] = [
     {code:'50GR 995', eskiCode:'50GR 995', yeniCode:'50GR 995',eiscilik:'50GR 995_ISC',yiscilik:'50GR 995_ISC'},
     {code:'100GR 995', eskiCode:'100GR 995', yeniCode:'100GR 995',eiscilik:'100GR 995_ISC',yiscilik:'100GR 995_ISC'}
     ];
+
+
