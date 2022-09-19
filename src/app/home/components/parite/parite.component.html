@@ -1,6 +1,6 @@
 <h4 style="align-items: center; text-align: center" class="align center">
-  <span style="margin-left: 1em">Alış</span>
-  <span style="margin-left: 11em">Satış</span>
+  <span style="margin-left: 1em">Satış</span>
+  <span style="margin-left: 11em">Alış</span>
 </h4>
  <table class="align center">
   <tbody
@@ -41,7 +41,7 @@
         {{ dovizData.Bid }}
       </td>
       <td data-label="" style="color: rgb(159, 159, 158)">
-        {{ dovizData.Time | date: "hh.MM.ss" }}
+        {{ now| date:"HH:mm:ss":"":"tr-TR" }}
       </td>
 
       <td></td>

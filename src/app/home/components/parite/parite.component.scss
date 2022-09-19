@@ -485,6 +485,9 @@ img.frame {
 }
 @media all and (max-width: 500px) {
   img.frame {
+    align-items: center;
+
     border-width: 0px;
     width: 100%; }
 }
+

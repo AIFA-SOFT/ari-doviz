@@ -13,7 +13,9 @@ import { LoginComponent } from './auth/login/login.component';
 import { AuthGuard } from './auth/auth.guard';
 import { AuthService } from './auth/auth.service';
 import { SharedModule } from './admin/shared.module';
-import { CommonModule } from '@angular/common';
+import { CommonModule, registerLocaleData } from '@angular/common';
+import   localeTr from '@angular/common/locales/tr';
+import   localeTrExtra from '@angular/common/locales/extra/tr';
 import { SideBarService } from './admin/services/side-bar.service';
 import { AdminComponent } from './admin/admin/admin.component';
 
@@ -29,6 +31,7 @@ import { HraddComponent } from './hr/hradd/hradd.component';
 import { HrlistComponent } from './hr/hrlist/hrlist.component';
 import { HreditComponent } from './hr/hredit/hredit.component';
 import { OffereditComponent } from './offer/offeredit/offeredit.component';
+registerLocaleData(localeTr, 'tr-TR', localeTrExtra);
 
 @NgModule({
   declarations: [

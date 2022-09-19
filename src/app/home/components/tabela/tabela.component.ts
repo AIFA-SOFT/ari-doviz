@@ -12,7 +12,8 @@ import { SarrafiyeSocketData, SocketData } from 'src/app/shared/models/socketDat
 export class TabelaComponent implements OnInit {
 
 
-  date: number = Date.now();
+  public now: Date = new Date();
+
   lightTheme: boolean = false;
   connection = webSocket(servers.real);
   socketitems: SocketData[] = [];
@@ -76,7 +77,11 @@ export class TabelaComponent implements OnInit {
   //   });
   // }
 
-  constructor(private themeService: ThemeService) {}
+  constructor(private themeService: ThemeService) {
+    setInterval(() => {
+      this.now = new Date();
+    }, 1);
+  }
   isShown: boolean = false;
   toggleTheme() {
     this.lightTheme = !this.lightTheme;

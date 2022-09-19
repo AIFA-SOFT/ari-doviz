@@ -10,7 +10,7 @@ import { SarrafiyeSocketData, SocketData } from 'src/app/shared/models/socketDat
   styleUrls: ['./parite.component.scss']
 })
 export class PariteComponent implements OnInit {
-  date: number = Date.now();
+  public now: Date = new Date();
   lightTheme: boolean = false;
   connection = webSocket(servers.real);
   socketitems: SocketData[] = [];
@@ -23,7 +23,11 @@ export class PariteComponent implements OnInit {
   ngOnInit() {
     this.getDovizData();
   }
-
+constructor(){
+  setInterval(() => {
+    this.now = new Date();
+  }, 1);
+}
 
   getDovizData() {
     this.connection.subscribe((data: SocketData[] | any) => {
