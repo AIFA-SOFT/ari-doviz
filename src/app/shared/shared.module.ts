@@ -10,7 +10,6 @@ import { FormsModule, ReactiveFormsModule } from "@angular/forms";
 import { PariteComponent } from "../home/components/parite/parite.component";
 import { PricefooterComponent } from "./components/pricefooter/pricefooter.component";
 import { SocialNavComponent } from "../core/components/social-nav/social-nav.component";
-import { TestComponent } from "../home/components/test/test.component";
 import { NavBarComponent } from "../core/components/nav-bar/nav-bar.component";
 import { RouterModule } from "@angular/router";
 import { AboutComponent } from "../home/components/about/about.component";
@@ -43,7 +42,6 @@ import { TabelaComponent } from "../home/components/tabela/tabela.component";
 
     SocialNavComponent,
     PricefooterComponent,
-    TestComponent,
     AboutComponent,
     OfferPageComponent
   ],
