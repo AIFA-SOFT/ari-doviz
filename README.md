@@ -17,6 +17,8 @@ Use it as you want
 - Ease of Use.
 - Angular
 - Tailwind CSS
+- Web Socket
+
 # Note
 Under firebase{} in environments, enter your firebase information in firebase settings.
 ## Screenshots
