@@ -1,4 +1,4 @@
-<div class="navbar dark:text-gray-300 lg:text-white" *ngIf="lightTheme == false"
+<!-- <div class="navbar dark:text-gray-300 lg:text-white" *ngIf="lightTheme == false"
   style="background-color: #1D1E22; color: white;">
   <input type="checkbox" id="checkItem">
   <div class="nav-btn">
@@ -8,22 +8,13 @@
       <span></span>
     </label>
   </div>
-  <div class="nav-brand ">
-    <!-- <img   *ngIf="lightTheme == true" src="../../../../assets/logo/logoblack.png" alt="" height="10"> -->
-
+  <div class="nav-brand ml-12">
     <img src="../../../../assets/logo/logowhite.png" alt=" logo" style="height:130px ;">
-
   </div>
 
   <ul class="nav-menu">
     <li routerLink="/home"> Anasayfa </li>
     <li routerLink='/about' routerLinkActive="active">Hakkımızda</li>
-    <!-- <li class="dropdown">Events
-      <ul class="dropdown-menu">
-        <li>Upcoming Events</li>
-        <li>Past Events</li>
-      </ul>
-    </li> -->
 
     <li routerLink="/comment">Ziyaretçilerimiz</li>
     <li routerLink="/hr-form"> İnsan Kaynakları </li>
@@ -35,27 +26,9 @@
     </li>
   </ul>
 </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <div class="navbar dark:text-gray-300 lg:text-white " *ngIf="lightTheme == true"
   style="background-color: #898d9a; color: black;">
-  <div class="nav-brand">
-    <!-- <img   *ngIf="lightTheme == true" src="../../../../assets/logo/logoblack.png" alt="" height="10"> -->
+  <div class="nav-brand ml-12">
     <img src="../../../../assets/logo/logoblack.png" alt=" logo" style="height:130px ;">
   </div>
   <input type="checkbox" id="checkItem">
@@ -69,12 +42,7 @@
   <ul class="nav-menu">
     <li routerLink="/home"> Anasayfa </li>
     <li routerLink='/about' routerLinkActive="active">Hakkımızda</li>
-    <!-- <li class="dropdown">Events
-      <ul class="dropdown-menu">
-        <li>Upcoming Events</li>
-        <li>Past Events</li>
-      </ul>
-    </li> -->
+
 
     <li routerLink="/comment">Ziyaretçilerimiz</li>
     <li routerLink="/hr-form"> İnsan Kaynakları </li>
@@ -85,14 +53,69 @@
       <ng-container *ngTemplateOutlet="lightTheme ? moon : sun"></ng-container>
     </li>
   </ul>
-</div>
+</div> -->
 
+<nav class="navbar dark:text-gray-300 lg:text-white" *ngIf="lightTheme == false"
+  style="background-color: #1D1E22; color: white;">
+  <section id="logo">
+    <a href="#">
+      <img src="../../../../assets/logo/logowhite.png" alt=" logo" style="height:100px ;">
+    </a>
+  </section>
+  <section id="main-menu">
+    <input type="checkbox" id="drop" />
+    <label for="drop" class="toggle">
+      <div></div>
+      <div></div>
+      <div></div>
+    </label>
+    <ul>
+      <li><a routerLink="/home">Anasayfa</a> </li>
+      <li> <a routerLink='/about' routerLinkActive="active">Hakkımızda</a></li>
+      <li> <a routerLink="/comment">Ziyaretçilerimiz</a></li>
+      <li> <a routerLink="/hr-form">İnsan Kaynakları </a></li>
+      <li><a routerLink="/contact">İletişim</a></li>
+      <li (click)="toggleTheme()" class="theme-mood">
+        <a>
+          <ng-container *ngTemplateOutlet="lightTheme ? moon : sun"></ng-container>
+        </a>
+      </li>
+    </ul>
+  </section>
+</nav>
 
+<nav class="navbar dark:text-gray-300 lg:text-white " *ngIf="lightTheme == true"
+  style="background-color: #898d9a; color: black;">
+  <section id="logo">
+    <a href="#">
 
+      <img src="../../../../assets/logo/logoblack.png" alt=" logo" style="height:100px ;">
 
+    </a>
+  </section>
+  <section id="main-menu">
+    <input type="checkbox" id="drop" />
+    <label for="drop" class="toggle">
+      <div></div>
+      <div></div>
+      <div></div>
+    </label>
+    <ul>
+      <li><a routerLink="/home">Anasayfa</a></li>
+      <li><a routerLink='/about' routerLinkActive="active">Hakkımızda</a></li>
 
-
-
+      <li><a routerLink="/comment">Ziyaretçilerimiz</a> </li>
+      <li> <a routerLink="/hr-form">İnsan Kaynakları</a></li>
+      <li><a routerLink="/contact">İletişim</a>
+      </li>
+      <li (click)="toggleTheme()" class="theme-mood">
+        <a>
+          <ng-container *ngTemplateOutlet="lightTheme ? moon : sun"></ng-container>
+        </a>
+      </li>
+    </ul>
+  </section>
+</nav>
 
 
 

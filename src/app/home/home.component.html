@@ -34,8 +34,8 @@
       class="over_content dark:bg-black lg:bg-white-200 dark:text-white lg:text-black v-[5em] h-[30em] woverflow-y-auto"
       id="all_content">
       <h4 style="align-items: center; text-align: center" class="align center">
-        <span style="margin-left: 1em">Satış</span>
-        <span style="margin-left: 11em">Alış</span>
+        <span style=" position: relative; right: 1em;">Satış</span>
+        <span style="margin-left: 10em">Alış</span>
 
       </h4>
       <table class="align center">
@@ -47,16 +47,16 @@
               </span>
             </td>
 
-
-            <td data-label="" class="bid dark:text-white lg:text-dark"
-              [ngClass]="{'up': dovizData.askPercentChange  >0 , 'down': dovizData.askPercentChange < 0 , 'stabil':dovizData.askPercentChange == 0 }">
-              {{ dovizData.Bid }}
-            </td>
-            <td data-label="" class="ask dark:text-white lg:text-dark"
+            <td   class="ask dark:text-white lg:text-dark"
               [ngClass]="{'exup': dovizData.askPercentChange  >0 , 'exdown': dovizData.askPercentChange < 0 , 'exstabil':dovizData.askPercentChange == 0 }">
 
               {{ dovizData.Ask }}
             </td>
+            <td data-label="" class="bid dark:text-white lg:text-dark"
+              [ngClass]="{'up': dovizData.askPercentChange  >0 , 'down': dovizData.askPercentChange < 0 , 'stabil':dovizData.askPercentChange == 0 }">
+              {{ dovizData.Bid }}
+            </td>
+
             <td data-label="" style="color: rgb(159, 159, 158)">
               {{ now| date:"HH:mm:ss":"":"tr-TR" }}
             </td>

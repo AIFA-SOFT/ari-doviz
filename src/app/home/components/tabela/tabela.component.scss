@@ -232,11 +232,11 @@ table th {
   }
   .ask{
     position: relative;
-    left:-5em;
+    left:-4em;
   }
 .bid{
  position: relative;
- left:5em;
+ left:4em;
  bottom: 1em;
 }
 
@@ -468,23 +468,3 @@ $color_grey_dark: #a2a2a2;
 
 
 
-
-
-
-
-img.frame {
-  border-image: url('//s3-us-west-2.amazonaws.com/s.cdpn.io/4273/frame.png') 93 92 87 92 stretch stretch;
-  border-color: #f4be52;
-  border-style: inset;
-  border-width: 60px;
-  display: block;
-  width: 15%;
-  height: auto;
-  background-color: rgb(255, 255, 255);
-  margin: 0 auto;
-}
-@media all and (max-width: 500px) {
-  img.frame {
-    border-width: 0px;
-    width: 100%; }
-}
